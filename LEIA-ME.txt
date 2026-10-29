@@ -1,0 +1,21 @@
+PORTAL SENAI — HTML, CSS E JAVASCRIPT
+
+ARQUIVOS PRINCIPAIS
+- index.html: página principal do portal.
+- style.css: estilos da página principal.
+- script.js: menu responsivo e animação de rolagem do headset.
+- visao.html: página da experiência de realidade virtual.
+- vr.css e vr.js: estilos e interação da página VR.
+- assets/: imagens utilizadas pelo portal.
+- sala1.jpg: panorama carregado na experiência VR.
+
+COMO ABRIR NO VS CODE
+1. Extraia a pasta do ZIP.
+2. Abra a pasta Portal_SENAI_HTML_CSS_JS no VS Code.
+3. Abra index.html no navegador. Para uma experiência mais consistente, use a extensão Live Server do VS Code e clique em “Go Live”.
+
+OBSERVAÇÕES
+- As imagens estão incluídas e os caminhos são relativos, então a página principal funciona sem instalar React, Vite ou Node.js.
+- A página VR carrega o A-Frame de um CDN e, portanto, precisa de conexão com a internet. Recursos imersivos e sensores de movimento podem exigir HTTPS ou localhost.
+- O projeto original não inclui maquina1.mp4; esse vídeo é opcional. O panorama sala1.jpg continua disponível sem ele.
+- A galeria mantém os espaços “Panorama em preparação” que já existiam no original, sem inventar imagens de ambientes.

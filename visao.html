@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B2340">
+  <title>Experiência VR | SENAI São João del-Rei</title>
+  <link rel="stylesheet" href="vr.css">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="vr.js"></script>
+</head>
+<body>
+  <a class="portal-bar" href="index.html"><span aria-hidden="true">←</span>Voltar ao portal</a>
+  <a-scene loading-screen="dotsColor: #F47721; backgroundColor: #0B2340" vr-mode-ui="enabled: true">
+    <a-assets timeout="10000">
+      <img id="sala1" src="sala1.jpg" alt="Panorama do ambiente">
+    </a-assets>
+    <!-- Vídeo opcional: adicione maquina1.mp4 nesta pasta para habilitá-lo. -->
+    <video id="vid" src="maquina1.mp4" preload="metadata" loop playsinline webkit-playsinline hidden></video>
+    <a-sky src="#sala1"></a-sky>
+    <a-video id="tela-video" src="#vid" position="0 1.6 -3" width="3" height="1.7" visible="false"></a-video>
+    <a-sphere id="ponto-video" class="clicavel" abre-video position="1.5 1.7 -3.2" radius="0.13" color="#F47721"></a-sphere>
+    <a-text value="OLHE PARA ABRIR O VIDEO" position="1.5 2.05 -3.2" align="center" color="#FFFFFF" width="3"></a-text>
+    <a-entity camera look-controls position="0 1.6 0">
+      <a-cursor fuse="true" fuse-timeout="1500" raycaster="objects: .clicavel" material="color: #F47721; shader: flat" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.018"></a-cursor>
+    </a-entity>
+  </a-scene>
+  <div id="aviso-video" role="status">Olhe para o ponto laranja por 1,5 s para tentar abrir o vídeo.</div>
+</body>
+</html>
